@@ -27,7 +27,7 @@ jobs:
       - name: Install packages
         run: npm install && npm list || true
       - name: Change package name
-        run: npe name "better-sqlite3-with-prebuilds" && npe repository.url "git+https://github.com/apify/better-sqlite3-with-prebuilds.git"
+        run: npe name "better-sqlite3-with-prebuilds" && npe repository.url "git+https://github.com/nrob81/better-sqlite3-with-prebuild.git"
       - name: Show package.json
         run: cat package.json
       - name: Build release
