@@ -9,7 +9,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [windows-latest, ubuntu-latest]
+        os: [windows-latest]
     steps:
       - uses: actions/checkout@v2
         with:
@@ -29,4 +29,4 @@ jobs:
         run: cat package.json
       - name: Build release
         run: |
-          node ./node_modules/prebuild/bin.js -r node -t 10.20.0 -t 12.0.0 -t 14.0.0 --include-regex 'better_sqlite3.node$' -u ${{ secrets.MY_TOKEN  }}
+          node ./node_modules/prebuild/bin.js -r electron -t 10.0.0 --include-regex 'better_sqlite3.node$' -u ${{ secrets.MY_TOKEN  }}
