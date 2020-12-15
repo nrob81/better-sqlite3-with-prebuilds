@@ -23,7 +23,7 @@ jobs:
       - name: Install global packages
         run: npm i -g npe detect-libc
       - name: Change ABI version
-        run: npe "devDependencies.node-abi" "2.18.0"
+        run: npe "devDependencies.node-abi" "2.19.3"
       - name: Install packages
         run: npm install && npm list || true
       - name: Change package name
